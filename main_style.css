@@ -1,3 +1,18 @@
 body {
-  background-color: rgb(229, 200, 255);
+  background-color: rgb(218, 175, 255);
+}
+
+header {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(58, 6, 93);
+}
+
+.sections {
+  background-color: blueviolet;
+  border: 10px;
+  border-style: double;
+  border-color: rgb(240, 224, 255);
+  text-align: center;
+  color: rgb(248, 238, 255);
 }
