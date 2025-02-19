@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="main_style.css" />
+  </head>
+
+  <body id="background">
+    <header>
+      <h1 id="heading">Welcome to the Input Playground!</h1>
+      <h3>Play around with these four Sections!</h3>
+    </header>
+
+    <!---Alert Section-->
+    <section id="alert" class="section-style">
+      <h3>Alert Yourself!</h3>
+      <form name="alertForm" onsubmit="return alertme()">
+        <label>Enter your Name:</label>
+        <input type="text" placeholder="Enter Here" id="name" />
+        <button id="alertButton">Alert Me</button>
+      </form>
+      <script>
+        function alertme() {
+          if (document.alertForm.userName.value === "") {
+            alert("You forgot to put a name, dummy!");
+          } else {
+            alert("Hi" + document.alertForm.name.value + "!");
+          }
+        }
+      </script>
+    </section>
+
+    <!---Color Change Section-->
+    <section id="color-change" class="section-style">
+      <h3>Change the color of this page!</h3>
+      <button onclick="changeColor()">Change Color!</button>
+      <script>
+        function changeColor() {}
+      </script>
+    </section>
+
+    <!---Text Validator Section-->
+    <section id="validator" class="section-style">
+      <h3>Test out Text!</h3>
+      <form name="validateForm" onsubmit="">
+        <label>Enter Text to Validate: </label>
+        <input type="text" placeholder="Enter Here" id="valiText" />
+        <button onclick="validateText()">Validate Text</button>
+      </form>
+      <script>
+        function validateText() {}
+      </script>
+    </section>
+
+    <!---Heading Modifier Section-->
+    <section id="heading-adder" class="section-style">
+      <h3>Add Text to the Header!</h3>
+      <button onclick="modifyHeader()">Add Text</button>
+      <script>
+        function modifyHeader() {
+          document.getElementById("heading").innerHTML += " Add Text ";
+        }
+      </script>
+    </section>
+  </body>
+</html>
