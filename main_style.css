@@ -8,7 +8,7 @@ header {
   color: rgb(58, 6, 93);
 }
 
-.sections {
+.section-style {
   background-color: blueviolet;
   border: 10px;
   border-style: double;
@@ -16,4 +16,6 @@ header {
   color: rgb(248, 238, 255);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  margin: 10px;
+  padding-bottom: 15px;
 }

@@ -12,38 +12,56 @@
       <h3>Play around with these four Sections!</h3>
     </header>
 
-    <div class="sections">
-      <!---Alert Section-->
-      <section id="alert">
-        <form name="alertForm" onsubmit="">
-          <label>Enter your Name:</label>
-          <input type="text" placeholder="Enter Here" id="userName" />
-          <input type="submit" />
-        </form>
-        <script type="text/javascript">
-          function alertme() {
-            if (document.alertForm.userName.value === "") {
-              alert("You forgot to put a name, dummy!");
-            } else {
-              alert("Hi" + document.alertForm.userName.value);
-            }
-          }
-        </script>
-      </section>
+    <!---Alert Section-->
+    <section id="alert" class="section-style">
       <h3>Alert Yourself!</h3>
-      <section id="color-change"></section>
-      <h3>Change the color of this page!</h3>
-      <button>Change Color!</button>
-      <script type="test/javascript">
-        const bgElement = document.getElementById("background")
-        console.log(bgElement)
+      <form name="alertForm" onsubmit="return alertme()">
+        <label>Enter your Name:</label>
+        <input type="text" placeholder="Enter Here" id="name" />
+        <button id="alertButton">Alert Me</button>
+      </form>
+      <script>
+        function alertme() {
+          if (document.alertForm.userName.value === "") {
+            alert("You forgot to put a name, dummy!");
+          } else {
+            alert("Hi" + document.alertForm.name.value + "!");
+          }
+        }
       </script>
-      <section id="validator"></section>
+    </section>
 
+    <!---Color Change Section-->
+    <section id="color-change" class="section-style">
+      <h3>Change the color of this page!</h3>
+      <button onclick="changeColor()">Change Color!</button>
+      <script>
+        function changeColor() {}
+      </script>
+    </section>
+
+    <!---Text Validator Section-->
+    <section id="validator" class="section-style">
       <h3>Test out Text!</h3>
-      <section id="heading-adder"></section>
+      <form name="validateForm" onsubmit="">
+        <label>Enter Text to Validate: </label>
+        <input type="text" placeholder="Enter Here" id="valiText" />
+        <button onclick="validateText()">Validate Text</button>
+      </form>
+      <script>
+        function validateText() {}
+      </script>
+    </section>
+
+    <!---Heading Modifier Section-->
+    <section id="heading-adder" class="section-style">
       <h3>Add Text to the Header!</h3>
-      <script src="" async defer></script>
-    </div>
+      <button onclick="modifyHeader()">Add Text</button>
+      <script>
+        function modifyHeader() {
+          document.getElementById("heading").innerHTML += " Add Text ";
+        }
+      </script>
+    </section>
   </body>
 </html>
