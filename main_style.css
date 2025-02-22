@@ -1,11 +1,21 @@
 body {
-  background-color: rgb(218, 175, 255);
+  background-color: lavender;
 }
 
 header {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(58, 6, 93);
+}
+
+.container-1 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.container-2 {
+  display: inline-grid;
+  align-items: center;
 }
 
 .section-style {
@@ -18,4 +28,6 @@ header {
   text-align: center;
   margin: 10px;
   padding-bottom: 15px;
+  width: 400px;
+  height: 100px;
 }
