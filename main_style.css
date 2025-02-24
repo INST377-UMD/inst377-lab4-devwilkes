@@ -18,8 +18,19 @@ header {
   align-items: center;
 }
 
+.container-3 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.container-4 {
+  display: inline-grid;
+  align-items: center;
+}
+
 .section-style {
   background-color: blueviolet;
+  align-items: center;
   border: 10px;
   border-style: double;
   border-color: rgb(240, 224, 255);
@@ -28,6 +39,6 @@ header {
   text-align: center;
   margin: 10px;
   padding-bottom: 15px;
-  width: 400px;
+  width: 700px;
   height: 100px;
 }

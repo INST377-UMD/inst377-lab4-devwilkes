@@ -19,7 +19,7 @@
         <form name="alertForm">
           <label>Enter your Name:</label>
           <input type="text" placeholder="Enter Here" id="name" />
-          <button id="alertButton" type = "submit" onclick="alertme()">Alert Me</button>
+          <button type = "submit" onclick="alertme()">Alert Me</button>
         </form>
         <script>
           function alertme() {
@@ -27,7 +27,7 @@
             if (document.alertForm.name.value === "") {
               alert("You forgot to put a name, dummy!");
             } else {
-              alert("Hi" + document.alertForm.name.value + "!");
+              alert("Hi " + document.alertForm.name.value + "!");
             }
           }
         </script>
@@ -41,7 +41,6 @@
         <button type = "button" onclick="changeColor()">Change Color!</button>
         <script type="text/javascript">
           function changeColor() {
-            console.log("hello");
             if (document.body.style.backgroundColor == "lavender") {
                 document.body.style.backgroundColor ="darksalmon";
             } else {
@@ -53,38 +52,44 @@
       </div>
 
       <!---Text Validator Section-->
-      <section id="validator" class="section-style">
-        <h3>Test out Text!</h3>
-        <form id="validateForm" onsubmit="">
-          <label>Enter Text to Validate: </label>
-          <input type="text" placeholder="Enter Here" id="valiText" />
-          <button onclick="validateText()">Validate Text</button>
-        </form>
-        <script>
-          function validateText() {
-            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-            if (document.validateForm.text.value.trim() == "") {
-              alert("You forgot to input text, dummy!");
-              return false;
+      <div class = "container-3">
+        <section id="validator" class="section-style">
+          <h3>Test out Text!</h3>
+          <form id="validateForm" onsubmit="">
+            <label>Enter Text to Validate: </label>
+            <input type="text" placeholder="Enter Here" id="testText" />
+            <button type = "submit" onclick="validateText()">Validate Text</button>
+          </form>
+          <script>
+            function validateText() {
+              event.preventDefault();
+              console.log("Hello!")
+              const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+              if (document.validateForm.testText.value.trim() === "") {
+                alert("You forgot to input text, dummy!");
+                return false;
+              }
+              if (validation.test(document.validateForm.testText.value)) {
+                alert("DE-NIED! >:P");
+                return false;
+              }
             }
-            if (validation.test(document.validateForm.text.value)) {
-              alert("DE-NIED! >:P");
-              return false;
-            }
-          }
-        </script>
-      </section>
+          </script>
+        </section>
+      </div>
 
       <!---Heading Modifier Section-->
-      <section id="heading-adder" class="section-style">
-        <h3>Add Text to the Header!</h3>
-        <button onclick="modifyHeader()">Add Text</button>
-        <script>
-          function modifyHeader() {
-            document.getElementById("heading").innerHTML += " Add Text ";
-          }
-        </script>
-      </section>
+      <div class = "container-4">
+        <section id="heading-adder" class="section-style">
+          <h3>Add Text to the Header!</h3>
+          <button onclick="modifyHeader()">Add Text</button>
+          <script>
+            function modifyHeader() {
+              document.getElementById("heading").innerHTML += " Add Text ";
+            }
+          </script>
+        </section>
+      </div>
     </div>
   </body>
 </html>
