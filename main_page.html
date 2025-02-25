@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="main_style.css" />
+  </head>
+
+  <body id="background">
+    <header>
+      <h1 id="heading">Welcome to the Input Playground!</h1>
+      <h3>Play around with these four Sections!</h3>
+    </header>
+
+    <div class="container-1">
+      <!---Alert Section-->
+      <section id="alert" class="section-style">
+        <h3>Alert Yourself!</h3>
+        <form name="alertForm">
+          <label>Enter your Name:</label>
+          <input type="text" placeholder="Enter Here" id="name" />
+          <button type = "submit" onclick="alertme()">Alert Me</button>
+        </form>
+        <script>
+          function alertme() {
+            event.preventDefault();
+            if (document.alertForm.name.value === "") {
+              alert("You forgot to put a name, dummy!");
+            } else {
+              alert("Hi " + document.alertForm.name.value + "!");
+            }
+          }
+        </script>
+      </section>
+    </div>
+
+      <!---Color Change Section-->
+      <div class = "container-2">
+      <section class="section-style">
+        <h3>Change the color of this page!</h3>
+        <button type = "button" onclick="changeColor()">Change Color!</button>
+        <script type="text/javascript">
+          function changeColor() {
+            if (document.body.style.backgroundColor == "lavender") {
+                document.body.style.backgroundColor ="darksalmon";
+            } else {
+              document.body.style.backgroundColor = "lavender";
+            }
+          }
+        </script>
+      </section>
+      </div>
+
+      <!---Text Validator Section-->
+      <div class = "container-3">
+        <section id="validator" class="section-style">
+          <h3>Test out Text!</h3>
+          <form id="validateForm">
+            <label>Enter Text to Validate: </label>
+            <input type="text" placeholder="Enter Here" id="testText" />
+            <button type = "submit" onclick="validateText()">Validate Text</button>
+          </form>
+          <script>
+            function validateText() {
+              event.preventDefault();
+              console.log("Hello!")
+              var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+              if (document.getElementById("testText").value == "") {
+                alert("You forgot to input text, dummy!");
+              }
+              if (validation.test(document.getElementById("testText").value)) {
+                alert("DE-NIED! >:P");
+              }
+            }
+          </script>
+        </section>
+      </div>
+
+      <!---Heading Modifier Section-->
+      <div class = "container-4">
+        <section id="heading-adder" class="section-style">
+          <h3>Add Text to the Header!</h3>
+          <button onclick="modifyHeader()">Add Text</button>
+          <script>
+            function modifyHeader() {
+              document.getElementById("heading").innerHTML += " Add Text ";
+            }
+          </script>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

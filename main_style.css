@@ -1,0 +1,44 @@
+body {
+  background-color: lavender;
+}
+
+header {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(58, 6, 93);
+}
+
+.container-1 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.container-2 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.container-3 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.container-4 {
+  display: inline-grid;
+  align-items: center;
+}
+
+.section-style {
+  background-color: blueviolet;
+  align-items: center;
+  border: 10px;
+  border-style: double;
+  border-color: rgb(240, 224, 255);
+  color: rgb(248, 238, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 15px;
+  width: 700px;
+  height: 100px;
+}
