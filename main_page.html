@@ -55,7 +55,7 @@
       <div class = "container-3">
         <section id="validator" class="section-style">
           <h3>Test out Text!</h3>
-          <form id="validateForm" onsubmit="">
+          <form id="validateForm">
             <label>Enter Text to Validate: </label>
             <input type="text" placeholder="Enter Here" id="testText" />
             <button type = "submit" onclick="validateText()">Validate Text</button>
@@ -64,14 +64,12 @@
             function validateText() {
               event.preventDefault();
               console.log("Hello!")
-              const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-              if (document.validateForm.testText.value.trim() === "") {
+              var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+              if (document.getElementById("testText").value == "") {
                 alert("You forgot to input text, dummy!");
-                return false;
               }
-              if (validation.test(document.validateForm.testText.value)) {
+              if (validation.test(document.getElementById("testText").value)) {
                 alert("DE-NIED! >:P");
-                return false;
               }
             }
           </script>
